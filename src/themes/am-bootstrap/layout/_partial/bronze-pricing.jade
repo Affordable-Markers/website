@@ -1,0 +1,43 @@
+- var cat =  _.head(_.filter(site.categories.map(function (c){return c;}), function(c) { return c.name === "Bronze";}))
+- var pricing = site.data["marker-pricing"]
+
+h2= (companion) ? "Companion Bronze" : "Single Bronze" 
+- var posts = cat.posts.sort('order', 1).filter(function(p) { return p.iscompanion === companion }).map(function(p){return p;})
+
+table.table.table-bordered.table-hover
+    thead: tr
+        th= (companion) ? "Plaque Size (Qty 2)" : "Plaque Size"
+        th
+            if (companion)
+                img.img-responsive(src='/images/markers/bronze/bronze_16x8-companion.png',alt="Set of bronze 16 inch by 8 inch plaques.")
+                div= "Plaque Price (Qty 2)"
+            else
+                img.img-responsive(src='/images/markers/bronze/bronze_16x8.png',alt="Bronze 16 inch by 8 inch plaque.")
+                div= "Plaque Price"
+        th= "Base Size"
+        th
+            if (companion)
+                img.img-responsive(src='/images/markers/bronze/bronze_16x8-companion-base.png',alt="Set of bronze 16 inch by 8 inch plaques with granite base.")
+            else
+                img.img-responsive(src='/images/markers/bronze/bronze_16x8-base.png',alt="Bronze 16 inch by 8 inch plaques with granite base.")
+            div= "Price with Base"
+    tbody
+        for post in posts
+            - var pEntry = pricing.find(function(p) { return p.ID === post.product_id })
+            - var bEntry = pricing.find(function(p) { return p.ID === post.base_product_id })
+            - var price = pEntry.BasePrice
+            tr 
+                td= post.dimensions
+                if pEntry
+                    td
+                        | $
+                        = number_format(price, {precision: 2})
+                else
+                    td tbd.
+                td= post.dimensions_base
+                if bEntry && pEntry
+                    td
+                        | $
+                        = number_format((price + bEntry.BasePrice), {precision: 2})
+                else
+                    td tbd.

@@ -1,0 +1,25 @@
+  - image: /images/our-staff/ron-danel.jpg
+    highlight: true
+    caption: Ron - Owner
+  - image: /images/our-staff/mike-danel.jpg
+    highlight: false
+    caption: Mike - VP/General Manager
+  - image: /images/our-staff/office-01.jpg
+    highlight: false
+    caption: Hunter - Office Manager
+  - image: /images/our-staff/office-02.jpg
+    highlight: false
+  - image: /images/our-staff/office-03.jpg
+    highlight: false
+  - image: /images/our-staff/production-01.jpg
+    highlight: false
+  - image: /images/our-staff/production-02.jpg
+    highlight: false
+  - image: /images/our-staff/production-03.jpg
+    highlight: false
+  - image: /images/our-staff/production-04.jpg
+    highlight: false
+  - image: /images/our-staff/production-05.jpg
+    highlight: false
+  - image: /images/our-staff/production-06.jpg
+    highlight: false

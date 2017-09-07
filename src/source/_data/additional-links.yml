@@ -1,0 +1,15 @@
+ - name: Urns
+   image: /images/markers/urns.png
+   url: //affordable-urns.com/
+   order: 7
+   type: category
+ - name: '100% Best Price Guarantee'
+   image: /images/best-price.jpg
+   url: /our-guarantee
+   order: 8
+   type: badge
+ - name: 'Lifetime Warranty'
+   image: /images/warranty-badge.jpg
+   url: /warranty
+   order: 8
+   type: badge

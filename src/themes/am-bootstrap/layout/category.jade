@@ -1,0 +1,70 @@
+- var pricing = site.data["marker-pricing"]
+
+h1= page.category
+p.text-justify= site.data.markers[page.category].description
+
+if (pagination == 2)
+    for post in page.posts
+        != partial('article', { post: post, index: true })
+else
+    if (page.category == "Bronze")
+        - var posts = page.posts.sort('order', 1).map(function(p) { return p })
+        for post, i in posts
+            - var pEntry = pricing.find(function(p) { return p.ID === post.product_id })
+            - var bEntry = pricing.find(function(p) { return p.ID === post.base_product_id })
+            .row
+                .col-md-5.col-md-offset-1: .panel
+                    .panel-body
+                        a.img(href="#{url_for(post.path)}"): img.img-responsive(src="#{post.product_image}" alt="#{post.title}" style="width:100%")
+                    .panel-body
+                        .category-item-header
+                            .title: a(href="#{url_for(post.path)}")= post.title + " Plaque"
+
+                            .price(itemtype="http://schema.org/Offer" itemscope="" itemprop="offers")
+                            if pEntry
+                                span.price-new
+                                    | $
+                                    = number_format(pEntry.BasePrice, {precision: 2})
+                                meta(content="{{pEntry.BasePrice}}" itemprop="price")
+                                meta(content="" itemprop="priceCurrency")
+                        .cart: a.btn.btn-primary.btn-block(href="#{url_for(config.designer_url)}/design/bronze/select") Get Started
+                        .cart: a.btn.btn-default.btn-block(href="#{url_for(post.path)}") Read More
+                .col-md-5: .panel
+                    .panel-body
+                        a.img(href="#{url_for(post.path)}"): img.img-responsive(src="#{post.product_image_base}" alt="#{post.title}" style="width:100%")
+                    .panel-body
+                        .category-item-header
+                            .title: a(href="#{url_for(post.path)}")= post.title + " Plaque with " + post.dimensions_base + " Base"
+
+                            .price(itemtype="http://schema.org/Offer" itemscope="" itemprop="offers")
+                            if bEntry && pEntry
+                                span.price-new
+                                    | $
+                                    = number_format((pEntry.BasePrice + bEntry.BasePrice), {precision: 2})
+                                meta(content="{{(pEntry.BasePrice + bEntry.BasePrice)}}" itemprop="price")
+                                meta(content="" itemprop="priceCurrency")
+                        .cart: a.btn.btn-primary.btn-block(href="#{url_for(config.designer_url)}/design/bronze/select") Get Started
+                        .cart: a.btn.btn-default.btn-block(href="#{url_for(post.path)}") Read More
+    else
+        - var posts = page.posts.sort('order', 1).map(function(p) { return p }).reduce(function (prev, item, i) { if(i % 3 === 0) { prev.push([item]); } else { prev[prev.length - 1].push(item); } return prev; }, [])
+        for row in posts
+            .row
+                for post, i in row
+                    - var pEntry = pricing.find(function(p) { return p.ID === post.product_id })
+                    .col-md-4.col-sm-6.col-xs-12: .panel
+                        .panel-body
+                            a.img(href="#{url_for(post.path)}"): img.img-responsive(src="#{post.product_image}" alt="#{post.title}" style="width:100%")
+                        .panel-body
+                            .title: a(href="#{url_for(post.path)}")= post.title
+                            if (page.category == "Uprights")
+                                p!= truncate(strip_html(post.content), {length: 200, separator: ' ', omission: '...(<a href="#">read more</a>)'})
+
+                            .price(itemtype="http://schema.org/Offer" itemscope="" itemprop="offers")
+                            if pEntry
+                                span.price-new
+                                    | $
+                                    = number_format(pEntry.BasePrice, {precision: 2})
+                                meta(content="{{pEntry.BasePrice}}" itemprop="price")
+                                meta(content="" itemprop="priceCurrency")
+                            .cart: a.btn.btn-primary.btn-block(href="#{url_for(config.designer_url)}/design/marker/select") Get Started
+                            .cart: a.btn.btn-default.btn-block(href="#{url_for(post.path)}") Read More

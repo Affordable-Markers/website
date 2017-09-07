@@ -1,0 +1,9 @@
+for employee in site.data.employees
+    .thumbnail
+        img.img-responsive(src="#{url_for(employee.image)}" alt="Picture of #{employee.name}")
+        .caption
+            h3= employee.name
+            p
+                != employee.position
+                br
+                != mail_to(employee.email)

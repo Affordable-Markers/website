@@ -1,0 +1,39 @@
+nav.navbar.navbar-default.navbar-logo
+    img.img-responsive.hidden-md.hidden-lg.pull-left(style="width: auto; height: 96px" src="/images/am-logo-color.png" alt="Affordable Markers logo.")
+    .row
+        .col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-0.hidden-xs(style="padding: 30px 30px 0 40px")
+            img(alt=config.subtitle src="/images/slogan.svg" style="height: 60px")
+        .col-sm-3.col-sm-offset-0.col-xs-offset-0.col-md-3.col-md-offset-0(style="padding-top: 32px")
+            div(style="height: 45px")
+                div(style="float: left;margin-right: 10px")
+                    span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x(style="color:#4a7355")
+                        i.fa.fa-phone.fa-stack-1x.fa-inverse
+                div
+                    | Call Toll Free
+                    br
+                    a(href="tel://+18669570399") 866-957-0399
+nav.navbar.navbar-inverse
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle.collapsed(data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            // Desktop Navigation
+            ul.nav.navbar-nav.pull-right.hidden-xs
+                for item, i in theme.menu
+                    li: a(href="#{url_for(item)}")= i
+            // collapsed Mobile Navigation
+            ul.nav.navbar-nav.hidden-lg.hidden-md.hidden-sm
+                for item, i in theme.menu
+                    li: a(href="#{url_for(item)}")= i
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") 
+                        | Markers 
+                        span.caret
+                    ul.dropdown-menu
+                        for cat in site.categories.map(function (item) { return { name: item.name, path: item.path } })
+                            li: a(href="#{url_for(cat.path)}")= cat.name

@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    !=partial('_partial/head', {post: page})
+    body
+        !=partial('_partial/deferred-css', { })
+        .container(style="padding: 0px;position: relative")
+            img.img-responsive.hidden-sm.hidden-xs(style="position: absolute; top: 0px; left: 0px; width: 280px; z-index: 100" src="/images/am-logo-color.png" alt="Affordable Markers logo.")
+            !=partial('_partial/header', null, {cache: !config.relative_link})
+        .container.content-main
+            .row
+                aside#sidebar.col-lg-3.col-sm-4.col-sm-4.hidden-xs
+                    != partial('_partial/sidebar')
+                .col-lg-9.col-sm-8!= body
+        != partial('_partial/footer')

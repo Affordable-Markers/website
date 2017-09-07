@@ -1,0 +1,30 @@
+
+.carousel.slide(data-ride="carousel" id= id)
+    ol.carousel-indicators
+        for slide, i in slides
+            if i === 0
+                li.active(data-target="##{id}" data-slide-to="#{i}")
+            else
+                li(class="" data-target="##{id}" data-slide-to="#{i}")
+
+    // Wrapper for slides
+    .carousel-inner(role="listbox")
+        for slide, i in slides
+            if i === 0
+                if slide.url
+                    .item.active: a(href="#{url_for(slide.url)}"): img(src="#{slide.image}" alt="First slide in a featured carousel.")
+                else
+                    .item.active: img(src="#{url_for(slide.image)}" alt="")
+            else
+                if slide.url
+                    .item(class=""): a(href="#{url_for(slide.url)}"): img(src="#{slide.image}" alt="#{i} positioned slide in a featured carousel.")
+                else
+                    .item(class=""): img(src="#{url_for(slide.image)}" alt="")
+
+    // Controls
+    a.left.carousel-control(href="##{id}" role="button" data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+        span.sr-only= Previous
+    a.right.carousel-control(href="##{id}" role="button" data-slide="next")
+        span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+        span.sr-only= Next

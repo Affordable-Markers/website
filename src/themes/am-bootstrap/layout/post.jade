@@ -1,0 +1,63 @@
+//!=partial('_partial/article', {post: page, index: false})
+- var pricing = site.data["marker-pricing"]
+- var pEntry = pricing.find(function(p) { return p.ID === page.product_id })
+- var bEntry = pricing.find(function(p) { return p.ID === page.base_product_id })
+
+h1= page.title
+.row
+    .col-sm-8
+        p
+            if (page.categories.first().name == "Uprights")
+                != page.content
+            else
+                != site.data.markers[page.categories.first().name].description
+        p
+            | Prices include the following:
+            ul
+                for incl in page.inclusions
+                    li= incl
+        if !page.free_shipping
+            p
+                | Additional costs include:
+                ul
+                    li Shipping
+                    li Rush Deliveries
+    .col-sm-4
+        .panel
+            .panel-body
+                img.img-responsive.center-block(src=page.product_image)
+            .panel-footer
+                p    
+                    .marker-type
+                        | Type: 
+                        span!= list_categories(page.categories, { show_count: false, style: 'none', separator: ', ' })
+                    .price 
+                        | Price: 
+                        if pEntry
+                            span
+                                | $
+                                = number_format(pEntry.BasePrice, {precision: 2})
+                                if page.free_shipping
+                                    |  (shipping included)
+                        else
+                            span tdb.
+
+                        if pEntry && bEntry
+                            div
+                                | $
+                                = number_format((pEntry.BasePrice + bEntry.BasePrice), {precision: 2})
+                                | (with base)
+                p
+                    a.btn.btn-primary.center-block(href="/get-started") Get Started
+                p.text-center 
+                    i.fa.fa-phone(aria-hidden="true")
+                    | 
+                    span Call to place an order<br /> 866-957-0399 
+
+p
+    | Before ordering, be sure to check with the ceemtary for requirements 
+    | such as; color, size, setting fees and delivery. Monuments are shipped 
+    | unassembled to prevent damage during transit. 
+if page.avail_colors
+    h2 Available Colors
+    p: img.img-responsive(src=page.avail_colors alt="Available Color Swatch")

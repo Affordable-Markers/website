@@ -1,0 +1,8 @@
+h1= page.title
+p Includes Shipping
+!= partial('_partial/marker-pricing' , {selectedCategory: "Flats"})
+!= partial('_partial/marker-pricing' , {selectedCategory: "Bevels"})
+!= partial('_partial/marker-pricing' , {selectedCategory: "Slants"})
+
+!= partial('_partial/bronze-pricing' , {companion: false})
+!= partial('_partial/bronze-pricing' , {companion: true})

@@ -1,0 +1,4 @@
+for staff in site.data["our-staff"].filter(function (s) { return !!!s.highlight })
+    .col-sm-6: .thumbnail
+        img.img-responsive(src="#{url_for(staff.image)}" alt="#{staff.caption}")
+        .caption: p!= staff.caption

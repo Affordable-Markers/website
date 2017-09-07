@@ -1,0 +1,82 @@
+.category-item-header {
+    min-height: 60px
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+}
+.navbar { margin-bottom: 0 }
+.navbar-logo { height: 100px }
+.navbar .container-fluid { padding: 0}
+.nav li { text-shadow: -1px 2px 2px #000; font-size: 15px }
+.content-main {
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.footer .container { 
+    background-color:rgb(136, 130, 77);
+    padding: 20px;
+    color: #bbb
+}
+.footer a { color: #eee }
+.footer ul { padding: 0 }
+.footer li { list-style-type: none; margin: 0 }
+
+/* Bootstrap Callout */
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #333333;
+}
+.bs-callout-default h4 {
+    color: #333333;
+}
+.bs-callout-primary {
+    border-left-color: #a8885d;
+}
+.bs-callout-primary h4 {
+    color: #a8885d;
+}
+.bs-callout-success {
+    border-left-color: #4a7355;
+}
+.bs-callout-success h4 {
+    color: #4a7355;
+}
+.bs-callout-danger {
+    border-left-color: #98483c;
+}
+.bs-callout-danger h4 {
+    color: #98483c;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #739db4;
+}
+.bs-callout-info h4 {
+    color: #739db4;
+}

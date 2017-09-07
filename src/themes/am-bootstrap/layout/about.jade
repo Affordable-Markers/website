@@ -1,0 +1,14 @@
+h1= page.title
+.row
+    .col-sm-6(style="font-size:20px;")
+        != page.content
+    .col-sm-5.col-sm-offset-1
+        != partial('_partial/about-highlight', { post: page })
+
+h2 Our Staff
+.row
+    != partial('_partial/image-list', { post: page, images: site.data["our-staff"].filter(function (s) { return !!!s.highlight }) })
+
+h2 Our Facility
+p Our large facility allows us to carry the right marker for your needs.
+!= partial('_partial/image-list', { post: page, images: site.data["our-facility"] })

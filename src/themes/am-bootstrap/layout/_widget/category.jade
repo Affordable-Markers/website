@@ -1,0 +1,13 @@
+.list-group
+    for cat in site.categories.map(function (item) { return { name: item.name, path: item.path, order: site.data.markers[item.name].order } }).sort(function(a,b){ return a.order-b.order; })
+        a.list-group-item(href="#{url_for(cat.path)}")
+            h4.list-group-item-heading.pull-right= cat.name
+            img(src="#{site.data.markers[cat.name].image}" style="height: 95px; width: auto" alt="#{cat.name}.")
+    for link in site.data["additional-links"]
+        if (link.type === "badge")
+            a.list-group-item(href="#{url_for(link.url)}" style="padding: 0")
+                img(src="#{link.image}" style="height: auto; width: 100%" alt="#{link.name}.")
+        else if (link.type === "category")
+            a.list-group-item(href="#{url_for(link.url)}")
+                h4.list-group-item-heading.pull-right= link.name
+                img(src="#{link.image}" style="height: 95px; width: auto" alt="#{link.name}.")

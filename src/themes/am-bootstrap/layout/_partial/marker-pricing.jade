@@ -1,0 +1,23 @@
+- var cat =  _.head(_.filter(site.categories.map(function (c){return c;}), function(c) { return c.name === selectedCategory;}))
+h2= cat.name
+- var dimensions1 = _.uniq( cat.posts.sort('order', 1).map(function(p) { return p.dimensions; } ) )
+- var colors1 = _.uniq( cat.posts.sort('order', 1).map(function(p) { return p.color; } ) )
+- var pricing = site.data["marker-pricing"]
+
+table.table.table-bordered.table-hover
+    thead: tr
+        th= selectedCategory + " (sizes)"
+        for color in colors1
+            th
+                img.img-responsive.col-xs-12(src=site.data.markers[cat.name]["pricing-images"][color] alt="#{color} #{cat.name} marker.")
+                div(style="padding-top: 5px")=color
+    tbody
+        for dimension in dimensions1
+            tr 
+                th= dimension
+                for color in colors1
+                    - var pEntry = pricing.find(function(p) { return p.ID === _.head( _.filter(cat.posts.sort('order', 1).map(function (p) { return { color: p.color, productId: p.product_id, dimensions: p.dimensions }; }), function(p){ return p.dimensions === dimension && p.color === color; })).productId })
+                    if pEntry
+                        td
+                            | $
+                            = number_format(pEntry.BasePrice, {precision: 2})

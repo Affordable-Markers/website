@@ -1,0 +1,47 @@
+# Header
+menu:
+  Home: /
+  Get Started: /get-started
+  Pricing: /pricing
+  About Us: /about
+  Contact Us: /contact
+  FAQ: /faq
+  Testimonials: /testimonials
+  Vendors: /vendors
+
+products:
+  Uprights: /products/uprights
+  Bronze: /products/bronze
+  Slants: /products/slants
+  Bevels: /products/bevels
+  Flats: /products/flats
+  Pets: /products/pets
+  Urns: //affordable-urns.com/
+  
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+
+# Sidebar
+sidebar: left
+widgets:
+- category
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

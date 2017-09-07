@@ -1,0 +1,7 @@
+!= post.content
+hr
+for msg in site.data.testimonials
+    blockquote
+        p
+            != markdown(msg.message)
+        footer= msg.author

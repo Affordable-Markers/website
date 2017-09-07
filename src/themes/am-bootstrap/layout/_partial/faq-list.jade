@@ -1,0 +1,6 @@
+!= post.content
+hr
+for faq in site.data.faqs
+    .bs-callout.bs-callout-info
+        h4= faq.question
+        != faq.answer

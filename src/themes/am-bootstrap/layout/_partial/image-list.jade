@@ -1,0 +1,7 @@
+for img in images
+    .col-sm-6: .thumbnail
+        if img.caption
+            img.img-responsive(src="#{url_for(img.image)}" alt="#{img.caption}" style="width:100%")
+            .caption: p!= img.caption
+        else
+            img.img-responsive(src="#{url_for(img.image)}" style="width:100%")
