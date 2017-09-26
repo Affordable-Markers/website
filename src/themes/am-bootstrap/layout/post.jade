@@ -48,7 +48,7 @@ h1= page.title
                                 = number_format((pEntry.BasePrice + bEntry.BasePrice), {precision: 2})
                                 | (with base)
                 p
-                    a.btn.btn-primary.center-block(href="/get-started") Get Started
+                    a.btn.btn-primary.center-block(href="#{url_for(config.designer_url)}") Get Started
                 p.text-center 
                     i.fa.fa-phone(aria-hidden="true")
                     | 
