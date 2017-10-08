@@ -66,5 +66,6 @@ else
                                     = number_format(pEntry.BasePrice, {precision: 2})
                                 meta(content="{{pEntry.BasePrice}}" itemprop="price")
                                 meta(content="" itemprop="priceCurrency")
-                            .cart: a.btn.btn-primary.btn-block(href="#{url_for(config.designer_url)}/design/marker/select") Get Started
+                            if (page.category != "Uprights")
+                                .cart: a.btn.btn-primary.btn-block(href="#{url_for(config.designer_url)}/design/marker/select") Get Started
                             .cart: a.btn.btn-default.btn-block(href="#{url_for(post.path)}") Read More
