@@ -1,5 +1,5 @@
 Flats:
-    description: The Flat Marker is the most economical type one will find. Flat Markers lay flat on the ground and come in a number of sizes and colors. Our prices start at $178, shipping included. The lower price tag does not mean lower quality. These Markers will beautifully mark the resting place of a loved one for centuries to come.
+    description: The Flat Marker is the most economical type one will find. Flat Markers lay flat on the ground and come in a number of sizes and colors. Our prices start at $158, shipping included. The lower price tag does not mean lower quality. These Markers will beautifully mark the resting place of a loved one for centuries to come.
     image: /images/markers/flats.png
     order: 1
     pricing-images:
@@ -7,7 +7,7 @@ Flats:
         Black: /images/pricing/flat-black.png
         Red: /images/pricing/flat-red.png
 Bevels:
-    description: The Bevel Marker is much like the Flat Marker. Bevel Markers lay flat on the ground and have a slanted face to give a small upright appearance. Our Bevel Markers have a polished face and rock pitched edges. We offer many sizes, colors and design options. Our prices start at $480.00. These Markers will beautifully mark the resting place of a loved on for centuries to come.
+    description: The Bevel Marker is much like the Flat Marker. Bevel Markers lay flat on the ground and have a slanted face to give a small upright appearance. Our Bevel Markers have a polished face and rock pitched edges. We offer many sizes, colors and design options. Our prices start at $420.00. These Markers will beautifully mark the resting place of a loved on for centuries to come.
     image: /images/markers/bevels.png
     order: 2
     pricing-images:
@@ -15,7 +15,7 @@ Bevels:
         Black: /images/pricing/bevel-black.png
         Red: /images/pricing/bevel-red.png
 Slants:
-    description: The Slant Marker sits in an upright position and gives the appearance of the more expensive upright without the high cost. The Slant Markers come with a polished face, and have rock pitched edges. We offer many size and design options. Prices start at $690, shipping included. Clicking the “Get Started” tab will take you to our design program where we will guide you step by step in creating a beautiful one of a kind Memorial for your loved one.
+    description: The Slant Marker sits in an upright position and gives the appearance of the more expensive upright without the high cost. The Slant Markers come with a polished face, and have rock pitched edges. We offer many size and design options. Prices start at $595, shipping included. Clicking the “Get Started” tab will take you to our design program where we will guide you step by step in creating a beautiful one of a kind Memorial for your loved one.
     image: /images/markers/slants.png
     order: 3
     pricing-images:
