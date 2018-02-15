@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free Shipping within the Contiguous US
 product_id: 71
 product_image: /images/markers/slants/slant_companion_36x10x16_gray.jpg
 avail_colors: 

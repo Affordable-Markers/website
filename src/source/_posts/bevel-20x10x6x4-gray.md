@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free Shipping within the Contiguous US
 product_id: 2
 product_image: /images/markers/bevels/bevel_20x10x6x4_gray.jpg
 avail_colors: /images/color-chart.jpg

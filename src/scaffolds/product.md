@@ -8,7 +8,7 @@ inclusions:
 - Custom Design and Layout
 - Large Selection of Artwork
 - Proof of Layout
-- Free Shipping
+- Free Shipping within Contiguous US
 category:  
 product_image: /test.jpg
 avail_colors: /test.jpg

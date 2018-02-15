@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free  within the Contiguous US
 product_id: 11
 product_image: /images/markers/bevels/bevel_companion_36x12x8x6_gray.jpg
 avail_colors: /images/color-chart.jpg

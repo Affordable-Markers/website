@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free Shipping within the Contiguous US
 product_id: 74
 product_image: /images/markers/uprights/upright_doubleangelwithheart.jpg
 avail_colors: /images/color-chart.jpg

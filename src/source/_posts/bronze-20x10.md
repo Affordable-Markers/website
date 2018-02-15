@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free  within the Contiguous US
 product_id: 18
 base_product_id: 14
 product_image: /images/markers/bronze/bronze_20x10.png

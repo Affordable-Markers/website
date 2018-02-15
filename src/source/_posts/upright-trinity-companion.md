@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free  within the Contiguous US
 product_id: 0
 product_image: /images/markers/uprights/upright_trinitycompanion.jpg
 avail_colors: /images/color-chart.jpg

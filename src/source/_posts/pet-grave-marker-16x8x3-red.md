@@ -5,7 +5,7 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
+  - Free Shipping within the Contiguous US
 product_id: 35
 product_image: /images/markers/pets/pet_16x8x3_red.jpg
 avail_colors: 

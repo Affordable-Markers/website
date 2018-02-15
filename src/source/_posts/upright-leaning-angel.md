@@ -5,8 +5,8 @@ inclusions:
   - Custom Design and Layout
   - Large Selection of Artwork
   - Proof of Layout
-  - Free Shipping
-product_id: 77
+  - Free Shipping within the Contiguous US
+product_id: 77 
 product_image: /images/markers/uprights/upright_leaningangel.jpg
 avail_colors: /images/color-chart.jpg
 date: 2016-08-23 14:15:24
