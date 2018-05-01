@@ -17,4 +17,4 @@ color: Black
 free_shipping: true
 order: 11
 ---
-The Flat Marker is the most economical type one will find. Flat Markers lay flat on the ground and come in a number of sizes and colors. Our prices start at $178, shipping included. The lower price tag does not mean lower quality. These Markers will beautifully mark the resting place of a loved one for centuries to come.
+The Flat Marker is the most economical type one will find. Flat Markers lay flat on the ground and come in a number of sizes and colors. Our prices start at $188, shipping included. The lower price tag does not mean lower quality. These Markers will beautifully mark the resting place of a loved one for centuries to come.
