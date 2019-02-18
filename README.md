@@ -9,3 +9,4 @@ Attempting to refresh pricing, 28x18x4 bronze base
 2/15/18 1:14 - Increased prices of 16x8x3 flat
 Price increase 3/22/18
 Attempting to push through change of hours
+Attempting to push through bronze pricing update
